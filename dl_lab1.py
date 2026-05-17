@@ -14,17 +14,17 @@ y = iris.target
 
 feature_names = iris.feature_names
 
-Data Pre-processing: Standardization
+# Data Pre-processing: Standardization
 
 scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
 
-Perform PCA for Dimension Reduction
+# Perform PCA for Dimension Reduction
 
 pca = PCA()
 X_pca = pca.fit_transform(X_scaled)
 
-Scree Plot
+# Scree Plot
 
 explained_variance = pca.explained_variance_ratio_
 
@@ -40,7 +40,7 @@ plt.title('Scree Plot')
 plt.grid()
 plt.show()
 
-Data Visualization in Lower Dimension (2D)
+# Data Visualization in Lower Dimension (2D)
 
 pca_2 = PCA(n_components=2)
 X_pca_2 = pca_2.fit_transform(X_scaled)
